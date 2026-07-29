@@ -1,6 +1,6 @@
 # Lyric Portrait Maker
 
-Simpleng browser app para gawing text portrait ang photo mo gamit ang sarili mong lyrics o words. Mag-upload ng portrait o landscape photo, ilagay ang text, at i-download ang result bilang PNG o HTML/CSS file.
+Simple browser app for creating text portrait with a photo of your choice. Upload portrait or landscape photo, then add text, and download it then the result should be a  result PNG or HTML/CSS file.
 
 ## Features
 
@@ -27,4 +27,6 @@ Simpleng browser app para gawing text portrait ang photo mo gamit ang sarili mon
 ## Notes
 
 - Lahat ng proseso ay sa browser lang.
+- Walang image upload na napupunta sa server.
+
 - Walang image upload na napupunta sa server.

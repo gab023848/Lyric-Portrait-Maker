@@ -4,6 +4,8 @@
 > *Crafted with ❤️ by **Gab** ([@gab023848](https://github.com/gab023848))*
 
 ---
+<img width="484" height="403" alt="image" src="https://github.com/user-attachments/assets/6d76a1de-b8ae-48e5-9ac0-b309a301eb70" />
+
 
 ## ✨ Overview
 

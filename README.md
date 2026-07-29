@@ -38,4 +38,3 @@ Since the app runs 100% in the browser, setting it up is instant:
 1. Clone the repository:
    ```bash
    git clone [https://github.com/gab023848/Lyric-Portrait-Maker.git](https://github.com/gab023848/Lyric-Portrait-Maker.git)
-- Walang image upload na napupunta sa server.

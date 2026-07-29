@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyric Portrait</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div>
+        <p class="eyebrow">Portrait Builder by Gabprooo</p>
+        <h1>Turn a photo into <em>lyricss</em>.</h1>
+      </div>
+      <p class="side-note">Upload photo,then add lyrics, and also you can add music but it is optional. The image only shows through the letters.</p>
+    </header>
+    <main class="stage">
+
+      <!-- PREVIEW (Placed first on mobile screens) -->
+      <section class="sleeve">
+        <div class="sleeve-top">
+          <span class="preview-badge"><span class="rec-dot"></span>Preview</span>
+          <span id="statusText">no photo yet</span>
+        </div>
+        <div class="portrait-frame empty" id="portraitFrame">
+          <div id="portraitText">Your text portrait will appear here once you add a photo and some words.</div>
+        </div>
+        <p class="sleeve-caption" id="captionText">— add a caption by editing your lyrics field —</p>
+      </section>
+
+      <!-- CONTROLS PANEL -->
+      <section class="panel">
+        <div class="field">
+          <p class="panel-label"><span>01 — Photo</span><span>.jpg / .png</span></p>
+          <label class="dropzone" id="imageDrop" tabindex="0">
+            <input type="file" id="imageInput" accept="image/*">
+            <span id="imageDropText">Click or drop a portrait or landscape photo</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <p class="field-title">02 — The words</p>
+          <textarea id="lyricsInput" rows="4" placeholder="Paste the lyrics, a poem, or your own note here. It'll repeat to fill the whole portrait."></textarea>
+        </div>
+
+        <div class="field">
+          <p class="panel-label"><span>03 — Music</span><span>optional</span></p>
+          <label class="dropzone" id="audioDrop" tabindex="0">
+            <input type="file" id="audioInput" accept="audio/*">
+            <span id="audioDropText">Click or drop a song file</span>
+          </label>
+          <audio id="audioPlayer" controls style="display:none;"></audio>
+          <div class="toggle-row">
+            <input type="checkbox" id="loopToggle">
+            <label for="loopToggle">Loop playback</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <p class="field-title">04 — Fine tune</p>
+          <div class="controls-grid">
+            <div>
+              <p class="slider-label"><span>Text size</span><span id="fontSizeVal">15px</span></p>
+              <input type="range" id="fontSize" min="7" max="34" value="15">
+            </div>
+            <div>
+              <p class="slider-label"><span>Line spacing</span><span id="lineHeightVal">1.15</span></p>
+              <input type="range" id="lineHeight" min="80" max="220" value="115">
+            </div>
+            <div>
+              <p class="slider-label"><span>Letter spacing</span><span id="letterSpacingVal">0px</span></p>
+              <input type="range" id="letterSpacing" min="-2" max="10" value="0">
+            </div>
+            <div>
+              <p class="slider-label"><span>Contrast</span><span id="contrastVal">115%</span></p>
+              <input type="range" id="contrast" min="60" max="200" value="115">
+            </div>
+          </div>
+
+          <div class="field-sub">
+            <p class="slider-label"><span>Style filter</span></p>
+            <select id="filterSelect">
+              <option value="none">Full color</option>
+              <option value="grayscale(1)">Grayscale</option>
+              <option value="sepia(0.65)">Sepia</option>
+              <option value="grayscale(1) invert(1)">Negative</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- DOWNLOAD & FORMAT SELECTOR -->
+        <div class="field action-field">
+          <div class="field-sub" style="margin-top: 0; margin-bottom: 0.5rem;">
+            <p class="slider-label"><span>Export Format</span></p>
+            <select id="exportFormatSelect">
+              <option value="png">PNG Picture (.png)</option>
+              <option value="html">HTML & CSS Code (.html)</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="downloadBtn">Download Portrait</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>made by gab — Everything runs in your browser check the source code hehe  — nothing you upload leaves this page</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
